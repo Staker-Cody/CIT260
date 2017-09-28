@@ -175,36 +175,73 @@
       }
   </script>
   <h3><a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Loops</h3>
-
+  <p> A Loop is used to run a  piece of code multiple times you can use it instead of writing something 10 times or if you wanted to loop through and array.</p>
+  <p><strong>For Loop</strong></p>
   <pre><code>
+     var loopy = 10;
 
-       </code></pre>
+      for (i = 0; i < loopy; i++){
+
+        document.write("Im a loop ", i );
+
+    }
+
+      </code></pre>
   <script type="text/javascript">
+    var loopy = 10;
 
+    for (i = 0; i < loopy; i++){
+
+        document.write("Im a for loop ", i , "<br>");
+
+    }
+  </script
+<br>
+  <p><strong>While Loop</strong></p>
+  <pre><code>
+ var superLoopy = 11;
+     var i = 0;
+      while (i < superLoopy) {
+         document.write("I'm a while loop ",i);
+          i++;
+      }
+
+
+      </code></pre>
+
+  <script type="text/javascript">
+     var superLoopy = 11;
+     var i = 0;
+      while (i < superLoopy) {
+         document.write("I'm a while loop ",i, "<br>");
+          i++;
+      }
 
   </script>
-  <h3><a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Functions</h3>
-
+  <h3><a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Functions Parameters</h3>
+  <p> A Function is used to create blocks of code that can be reused and serves one simple task. You use a function by calling it. The function can have data passed into it these are called parameters.</p>
   <pre><code>
-        var numberDataType = 1;
-        var booleanDataType = True;
-        var stringDataType = "I'm a string";
+
+    function getCoolPerson(coolId){
+
+        return coolDudes[coolId];
+
+
+    }
+    var cool = getCoolPerson(2);
+    document.write(cool);
       </code></pre>
   <script type="text/javascript">
 
 
-  </script>
+    function getCoolPerson(coolId){
 
-  <h3><a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Parameters</h3>
-
-  <pre><code>
-        var numberDataType = 1;
-        var booleanDataType = True;
-        var stringDataType = "I'm a string";
-      </code></pre>
-  <script type="text/javascript">
+        return coolDudes[coolId];
 
 
+    }
+    var cool = getCoolPerson(2);
+    document.write(cool);
   </script>
   <h3><a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Associative Arrays</h3>
   <p>Discussion with group</p>
