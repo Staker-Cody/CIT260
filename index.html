@@ -1,108 +1,226 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <title>CIT 261 notes</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#157878">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/cayman.css">
-  </head>
-  <body>
-    <section class="page-header">
-      <h1 class="project-name">CIT 261 Cody Staker</h1>
-    </section>
+<head>
+  <meta charset="UTF-8">
+  <title>CIT 261 notes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#157878">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/cayman.css">
+</head>
+<body>
+<section class="page-header">
+  <h1 class="project-name">CIT 261 Cody Staker</h1>
+</section>
 
-    <section class="main-content">
+<section class="main-content">
 
 
-      <p></p>
+  <p></p>
 
-      <h2>
-      <a id="user-content-header-2" class="anchor" href="#header-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>JavaScript Notes</h2>
-        <hr>
-      <h3><a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Variables</h3>
-        <h4><a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data Types</h4>
-      <p>Variables are containers that you store data in. There are several types of date taht ca be stored the main three are <strong>Number</strong>, <strong>String</strong>, and <strong>Boolean</strong>.
-        The number type can store well numbers. The string data type holds strings of text. The boolean type hold only one of two values <strong>True</strong>, and <strong>False</strong>.
-      </p>
-      <pre><code>
+  <h2>
+    <a id="user-content-header-2" class="anchor" href="#header-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>JavaScript Notes</h2>
+  <hr>
+  <h3><a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Variables</h3>
+  <h4><a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data Types</h4>
+  <p>Variables are containers that you store data in. There are several types of date taht ca be stored the main three are <strong>Number</strong>, <strong>String</strong>, and <strong>Boolean</strong>.
+    The number type can store well numbers. The string data type holds strings of text. The boolean type hold only one of two values <strong>True</strong>, and <strong>False</strong>.
+  </p>
+  <pre><code>
         var numberDataType = 1;
         var booleanDataType = True;
         var stringDataType = "I'm a string";
 
       </code></pre>
-        <p> You can even do math with variables and the number data type</p>
-        <pre><code>
+  <p> You can even do math with variables and the number data type</p>
+  <pre><code>
         var a = 5;
         var b = 10;
         var c = a * c;
         var e = 10 / 2;
       </code></pre>
-        <h4><a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Variable Example</h4>
-        <p>The two world below are stored in variables and then combined and displayed with javascript.</p>
-        <pre><code>
+  <p><strong>Variable Example</strong></p>
+  <p>The two world below are stored in variables and then combined and displayed with javascript.</p>
+  <pre><code>
             var hi = "Hello";
             var wo = "World!"
             document.write(hi," ",wo);
         </code></pre>
-        <script type="text/javascript">
-            var hi = "Hello";
-            var wo = "World!"
-            document.write(hi," ",wo);
-        </script>
+  <script type="text/javascript">
+      var hi = "Hello";
+      var wo = "World!"
+      document.write(hi," ",wo);
+  </script>
 
-        <hr>
+  <hr>
 
-      <h3><a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Arrays</h3>
-        <p>An array is also used to store a data just multiple values in one variable. you refer to a certain point </p>
-      <pre><code>
+  <h3><a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Arrays</h3>
+  <p>An array is also used to store a data just multiple values in one variable. you refer to a certain point </p>
+  <pre><code>
         var coolDudes = ["Charles","Philip", "Owen"];
         var coolGirls = ["Emily", "Cami"];
         var aVeryCoolPerson = coolGirls[0];
       </code></pre>
-        <h3><a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Associative Arrays</h3>
+  <script type="text/javascript">
+      var coolDudes = ["Charles","Philip", "Owen"];
+      var coolGirls = ["Emily", "Cami"];
+      var aVeryCoolPerson = coolGirls[0];
+      document.write(aVeryCoolPerson);
+  </script>
 
-        <pre><code>
+  <h3><a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Conditional Statements</h3>
+  <p>Condtional statments run a block of code if it meets a certain condition, or it will run a different block of code if it doesn't meet the condition.</p>
+  <pre><code>
+       var numberOne = 1;
+       if (numberOne == 1){
+          document.write("The condition is 1!");
+
+        }
+      </code></pre>
+  <script type="text/javascript">
+      var numberOne = 1;
+      if (numberOne == 1){
+          document.write("The condition is 1!");
+
+      }
+  </script>
+  <p><strong>Else statement</strong></p>
+  <pre><code>
+       var numberThree = 3;
+      if (numberThree == 2){
+          document.write("The condition is 2");
+           }
+      else{
+          document.write("The number is ",numberThree,"!");
+      }
+      </code></pre>
+  <script type="text/javascript">
+      var numberThree = 3;
+      if (numberThree == 2){
+          document.write("The condition is 2");
+      }
+      else{
+          document.write("The number is ",numberThree,"!");
+      }
+  </script>
+  <p><strong>Else If</strong></p>
+  <pre><code>
+         var numberFive = 5;
+        if (numberFive == 3){
+
+
+        }else if (numberFive = 2){
+            document.write("The Variable is = ",numberFive , "!");
+
+        }else if (numberFive = 5){
+
+            document.write("The Variable is = ",numberFive , "!");
+        }
+      </code></pre>
+  <script type="text/javascript">
+
+      var numberFive = 5;
+      if (numberFive == 3){
+
+
+      }else if (numberFive = 2){
+          document.write("The Variable is = ",numberFive , "!");
+
+      }else if (numberFive = 5){
+
+          document.write("The Variable is = ",numberFive , "!");
+      }
+  </script>
+  <p><strong>Switch Statement</strong></p>
+
+  <pre><code>
+          var numberSix = 6
+        switch (numberSix){
+            case 3:
+                document.write("The Variable is = 3!");
+            break;
+            case 4:
+                document.write("The Variable is = 4!");
+            break;
+            case 5:
+                document.write("The Variable is = 5!");
+            break;
+            case 6:
+                document.write("The Variable is = 6!");
+            break;
+            default:
+                document.write("I have no idea what the number is!");
+
+        }
+      </code></pre>
+  <script>
+      var numberSix = 6
+      switch (numberSix){
+          case 3:
+              document.write("The Variable is = 3!");
+              break;
+          case 4:
+              document.write("The Variable is = 4!");
+              break;
+          case 5:
+              document.write("The Variable is = 5!");
+              break;
+          case 6:
+              document.write("The Variable is = 6!");
+              break;
+          default:
+              document.write("I have no idea what the number is!");
+
+      }
+  </script>
+  <h3><a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Loops</h3>
+
+  <pre><code>
+
+       </code></pre>
+  <script type="text/javascript">
+
+
+  </script>
+  <h3><a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Functions</h3>
+
+  <pre><code>
         var numberDataType = 1;
         var booleanDataType = True;
         var stringDataType = "I'm a string";
       </code></pre>
-        <h3><a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Loops</h3>
+  <script type="text/javascript">
 
-        <pre><code>
+
+  </script>
+
+  <h3><a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Parameters</h3>
+
+  <pre><code>
         var numberDataType = 1;
         var booleanDataType = True;
         var stringDataType = "I'm a string";
       </code></pre>
-      <h3><a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Parameters</h3>
-
-      <pre><code>
-        var numberDataType = 1;
-        var booleanDataType = True;
-        var stringDataType = "I'm a string";
-      </code></pre>
-
-      <h3><a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Conditional Statements</h3>
-
-      <pre><code>
-        var numberDataType = 1;
-        var booleanDataType = True;
-        var stringDataType = "I'm a string";
-      </code></pre>
+  <script type="text/javascript">
 
 
-      <hr>
+  </script>
+  <h3><a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Associative Arrays</h3>
+  <p>Discussion with group</p>
+  <pre><code>
+       </code></pre>
+
+  <hr>
 
 
 
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/jasonlong/cayman-theme">Cayman</a> is maintained by <a href="https://github.com/jasonlong">jasonlong</a>.</span>
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
-      </footer>
+  <footer class="site-footer">
+    <span class="site-footer-owner"><a href="https://github.com/jasonlong/cayman-theme">Cayman</a> is maintained by <a href="https://github.com/jasonlong">jasonlong</a>.</span>
+    <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+  </footer>
 
-    </section>
+</section>
 
-  </body>
+</body>
 </html>
