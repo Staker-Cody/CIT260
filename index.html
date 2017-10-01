@@ -248,7 +248,74 @@
   <pre><code>
        </code></pre>
 
-  <hr>
+    <a id="user-content-header-2" class="anchor" href="#header-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>JavaScript Objects</h2>
+
+    <h3><a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>JavaScript Objects</h3>
+    <p>When it comes to object oriented programming I like the idea that you creat objects that "do things", but a another basic thing to understand about object is we are creating our own data type.</p>
+
+    <p><strong>Creating a Object</strong></p>
+    <pre><code data-language="javascript">
+
+        function car(model, year, color) {
+         this.carModel = model;
+         this.carYear = year;
+         this.carColor = color;
+        }
+        var mustang = new car("Ford", "1991", "green");
+        var tundra = new car("Toyota", "2014", "blue");
+
+         document.write("I own a ",tundra.carModel," Trundra it is ", tundra.carColor,".");
+
+
+       </code></pre>
+
+    <script type="text/javascript">
+    function car(model, year, color) {
+    this.carModel = model;
+    this.carYear = year;
+    this.carColor = color;
+    }
+    var mustang = new car("Ford", 1991, "green");
+    var tundra = new car("Toyota", 2014, "blue");
+
+    document.write("I own a ",tundra.carModel," Trundra it is ", tundra.carColor,".");
+    </script>
+
+    <h3><a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>JavaScript Method</h3>
+     <p>A Method is a function created within an object to manipilate the object</p>
+    <pre><code data-language="javascript">
+
+        function car(model, year, color) {
+         this.carModel = model;
+         this.carYear = year;
+         this.carColor = color;
+     }
+        var mustang = new car("Ford", "1991", "green");
+        var tundra = new car("Toyota", "2014", "blue");
+
+
+       </code></pre>
+
+    <script type="text/javascript">
+        function aCar(amodel, ayear, acolor) {
+            this.carModel = amodel;
+            this.carYear = ayear;
+            this.carColor = acolor;
+            this.changeYear = function(newYear){
+                this.carYear = newYear;
+
+            };
+        }
+        var camry = new aCar("Toyota", 1991, "green");
+        var corrola = new aCar("Toyota", 2016, "blue");
+
+        document.write("Camry year before the method = ", camry.carYear,"<br>");
+        camry.changeYear(2017);
+        document.write("Camry year before the method = ", camry.carYear,"<br>");
+
+    </script>
+
+    <hr>
 
 
 
