@@ -18,7 +18,7 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2522">
+            <state relative-caret-position="1048">
               <caret line="66" column="40" lean-forward="true" selection-start-line="66" selection-start-column="40" selection-end-line="66" selection-end-column="40" />
               <folding />
             </state>
@@ -28,8 +28,8 @@
       <file leaf-file-name="css.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="156" column="68" lean-forward="true" selection-start-line="156" selection-start-column="68" selection-end-line="156" selection-end-column="68" />
+            <state relative-caret-position="2346">
+              <caret line="138" column="9" lean-forward="true" selection-start-line="138" selection-start-column="9" selection-end-line="138" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -255,7 +255,7 @@
       <workItem from="1509410551802" duration="23000" />
       <workItem from="1509736790678" duration="4653000" />
       <workItem from="1509751420346" duration="4024000" />
-      <workItem from="1510105183579" duration="2196000" />
+      <workItem from="1510105183579" duration="2446000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1506150814111</created>
@@ -341,11 +341,18 @@
       <option name="project" value="LOCAL" />
       <updated>1510105200678</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Update">
+      <created>1510109185182</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1510109185182</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36724000" />
+    <option name="totallyTimeSpent" value="36974000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -501,6 +508,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1048">
+          <caret line="66" column="40" lean-forward="true" selection-start-line="66" selection-start-column="40" selection-end-line="66" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/dom.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="986">
@@ -509,18 +524,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2522">
-          <caret line="66" column="40" lean-forward="true" selection-start-line="66" selection-start-column="40" selection-end-line="66" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="156" column="68" lean-forward="true" selection-start-line="156" selection-start-column="68" selection-end-line="156" selection-end-column="68" />
+        <state relative-caret-position="2346">
+          <caret line="138" column="9" lean-forward="true" selection-start-line="138" selection-start-column="9" selection-end-line="138" selection-end-column="9" />
           <folding />
         </state>
       </provider>
