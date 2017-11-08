@@ -14,7 +14,7 @@
         .tone {
             width: 100px;
             height: 100px;
-            -webkit-transition: width 2s, height 3s; /* Safari */
+            -webkit-transition: width 2s, height 3s;
             transition: width 1s, height 1s;
 
 
@@ -41,11 +41,18 @@
         .trone{
             width: 100px;
             height: 100px;;
-            -ms-transform: rotate(7deg);
-            -webkit-transform: rotate(7deg);
-            transform: rotate(7deg);
 
         }
+
+        .trone:hover{
+            -ms-transform: rotate(7deg); /* IE 9 */
+            -webkit-transform: rotate(7deg); /* Chrome, Safari, Opera */
+            transform: rotate(7deg);
+
+
+
+        }
+
 
         /* Safari 4.0 - 8.0 */
         @-webkit-keyframes photo {
@@ -60,9 +67,9 @@
         @keyframes photo {
             0%   {left:0px; top:0px;}
             25%  {left:200px; top:0px;}
-            50%  {left:200px; top:200px;}
-            75%  {left:0px; top:200px;}
-            100% {left:0px; top:0px;}
+            50%  {left:300px; top:0px;}
+            75%  {left:200px; top:0px;}
+            100% {left:100px; top:0px;}
         }
 
 
@@ -76,7 +83,11 @@
 
     <h3><a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>CSS Transitions</h3>
     <p> CSS transitions give you the ability to change the styling of something when the user interacts with in my example below I increase the size of the photos when the user hovers over them. There are several different attributes you can change you can also change the speed and how it looks as it transitions </p>
-
+    <h4>Hover Over Each Image</h4>
+    <div id="cf">
+        <img class="tone" src="photos/sail.jpg" />
+        <img class="tone" src="photos/City.jpg" />
+    </div>
     <pre><code>
              .tone {
             width: 100px;
@@ -95,35 +106,86 @@
       </code></pre>
 
 
-<div class= ""></div>
 
-    <div id="cf">
-        <img class="tone" src="photos/sail.jpg" />
-        <img class="tone" src="photos/City.jpg" />
-    </div>
+
     <h3><a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>CSS Animations</h3>
     <p> CSS Animations are another way you can have an elements style change automatically or with interaction if you want. In the example below I am just changing the position of the photos. The percent in the CSS determines when during the animation that the element will take on that style. </p>
+
+
+
     <div id="cf">
         <img class="aone" src="photos/sail.jpg" />
         <img class="aone" src="photos/City.jpg" />
     </div>
+
+    <pre><code>
+    .aone{
+    width: 100px;
+    height: 100px;;
+    position: relative;
+    -webkit-animation-name: photo;
+    -webkit-animation-duration: 4s;
+    -webkit-animation-iteration-count: infinite;
+    animation-name: photo;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;}
+
+    /* Safari 4.0 - 8.0 */
+    @-webkit-keyframes photo {
+    0%   {left:0px; top:0px;}
+    25%  {left:200px; top:0px;}
+    50%  {left:200px; top:200px;}
+    75%  {left:0px; top:200px;}
+    100% {left:0px; top:0px;}
+    }
+
+    /* Standard syntax */
+    @keyframes photo {
+    0%   {left:0px; top:0px;}
+    25%  {left:200px; top:0px;}
+    50%  {left:200px; top:0px;}
+    75%  {left:300px; top:0px;}
+    100% {left:400px; top:0px;}
+    }
+    </code></pre>
+
+
+
     <section>
 
+
     <h3><a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>CSS Transforms</h3>
+        <h4>Hover Over Each Image</h4>
         <div id="cf">
             <img class="trone" src="photos/sail.jpg" />
             <img class="trone" src="photos/City.jpg" />
         </div>
 
+        <pre><code>
 
-</p>
+
+        .trone{
+        width: 100px;
+        height: 100px;;
+        -ms-transform: rotate(40deg);
+        -webkit-transform: rotate(40deg);
+        transform: rotate(40deg);
+
+        }
+
+
+
+
+        </code></pre>
+
+
 
     </section>
 
 
 </section>
 
-</head>
+</body>
 <body>
 
 </body>
