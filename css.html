@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <title>CIT 261 notes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/cayman.css">
+
+    <style>
+        .tone {
+            width: 100px;
+            height: 100px;
+            -webkit-transition: width 2s, height 3s; /* Safari */
+            transition: width 1s, height 1s;
+
+
+
+        }
+        .tone:hover {
+
+            width: 300px;
+            height: 300px;
+        }
+
+
+        .aone{
+            width: 100px;
+            height: 100px;;
+            position: relative;
+            -webkit-animation-name: photo;
+            -webkit-animation-duration: 4s;
+            -webkit-animation-iteration-count: infinite;
+            animation-name: photo;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;}
+
+        .trone{
+            width: 100px;
+            height: 100px;;
+            -ms-transform: rotate(7deg);
+            -webkit-transform: rotate(7deg);
+            transform: rotate(7deg);
+
+        }
+
+        /* Safari 4.0 - 8.0 */
+        @-webkit-keyframes photo {
+            0%   {left:0px; top:0px;}
+            25%  {left:200px; top:0px;}
+            50%  {left:200px; top:200px;}
+            75%  {left:0px; top:200px;}
+            100% {left:0px; top:0px;}
+        }
+
+        /* Standard syntax */
+        @keyframes photo {
+            0%   {left:0px; top:0px;}
+            25%  {left:200px; top:0px;}
+            50%  {left:200px; top:200px;}
+            75%  {left:0px; top:200px;}
+            100% {left:0px; top:0px;}
+        }
+
+
+    </style>
+</head>
+<body>
+<section class="page-header">
+    <h1 class="project-name">CSS Cody Staker</h1>
+</section>
+<section class="main-content">
+
+    <h3><a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>CSS Transitions</h3>
+    <p> CSS transitions give you the ability to change the styling of something when the user interacts with in my example below I increase the size of the photos when the user hovers over them. There are several different attributes you can change you can also change the speed and how it looks as it transitions </p>
+
+    <pre><code>
+             .tone {
+            width: 100px;
+            height: 100px;
+            -webkit-transition: width 2s, height 3s; /* Safari */
+            transition: width 1s, height 1s;
+
+
+
+        }
+        .tone:hover {
+
+            width: 300px;
+            height: 300px;
+        }
+      </code></pre>
+
+
+<div class= ""></div>
+
+    <div id="cf">
+        <img class="tone" src="photos/sail.jpg" />
+        <img class="tone" src="photos/City.jpg" />
+    </div>
+    <h3><a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>CSS Animations</h3>
+    <p> CSS Animations are another way you can have an elements style change automatically or with interaction if you want. In the example below I am just changing the position of the photos. The percent in the CSS determines when during the animation that the element will take on that style. </p>
+    <div id="cf">
+        <img class="aone" src="photos/sail.jpg" />
+        <img class="aone" src="photos/City.jpg" />
+    </div>
+    <section>
+
+    <h3><a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>CSS Transforms</h3>
+        <div id="cf">
+            <img class="trone" src="photos/sail.jpg" />
+            <img class="trone" src="photos/City.jpg" />
+        </div>
+
+
+</p>
+
+    </section>
+
+
+</section>
+
+</head>
+<body>
+
+</body>
+</html>

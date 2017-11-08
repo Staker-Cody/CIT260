@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML DOM </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/cayman.css">
+</head>
+<body>
+<section class="page-header">
+    <h1 class="project-name">Java Script & DOM Cody Staker</h1>
+</section>
+
+<section class="main-content">
+
+<h3><a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>DOM</h3>
+
+    <p>DOM Gives us the ability to change elements on a a page, with Java Script the things you can change are.</p>
+    <ul>
+        <li>All the HTML elements in the page</li>
+        <li>All the HTML attributes in the page</li>
+        <li>All the CSS styles in the page</li>
+        <li>Remove existing HTML elements and attributes</li>
+        <li>Add new HTML elements and attributes</li>
+        <li>React to all existing HTML events in the page</li>
+        <li>Create new HTML events in the page</li>
+    </ul>
+    <p>We won't be going over all of these today but this here are a few examples</p>
+
+    <button type="button" onclick="fillP()">Click to fill the paragraph</button>
+    <button type="button" onclick="clearP()">Click to clear the paragraph</button>
+    <p id="paragraph1"></p>
+
+    <script>
+        function fillP(){
+            document.getElementById("paragraph1").innerHTML = "See this is super cool." ;
+        }
+        function clearP(){
+
+            document.getElementById("paragraph1").innerHTML ="";
+
+
+        }
+    </script>
+
+    <p>You can trigger DOM on events like button or mouse over</p>
+
+    <button onmouseover="mHover(this)" onmouseup="makeIt()">Hover Over me</button>
+
+    <button onmouseup="changeN()">Hover Over me</button>
+    <div id="div1">
+    </div>
+
+    <script>
+        var node;
+        node = document.createTextNode("Wow So Cool");
+        function mHover(obj) {
+            obj.style.backgroundColor = "blue";
+            obj.innerHTML = "Now Click me";
+        }
+
+        function makeIt() {
+           var para = document.createElement("p");
+            para.appendChild(node);
+
+            var element = document.getElementById("div1");
+            element.appendChild(para);
+        }
+        function changeN(){
+            node = document.createTextNode("Look at that!");;
+
+        }
+    </script>
+
+
+<h3>Sources</h3>
+    <a href="https://www.w3schools.com/js/js_htmldom.asp">W3 Schools</a>
+
+
+</section>
+</body>
+</html>
