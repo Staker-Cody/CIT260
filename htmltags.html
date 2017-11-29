@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Tags </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/cayman.css">
+</head>
+<body>
+<section class="page-header">
+    <h1 class="project-name">HTML5 Tags Cody Staker</h1>
+</section>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<section class="main-content">
+
+
+<h3><a id="user-content-header-1" class="anchor" href="#header-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>HTML5 Video</h3>
+<p>With HTML5 we have the ability to add video directly to our web application. This is done with the video Tag. You can control video with DOM. In the example below I am using the autoplay and controls attributes. This causes the video to play automatically and the controls give the user that ability.</p>
+
+
+    <video width="100%" height="100%" autoplay controls>
+        <source src="Videos/Down_by_the_River.mp4" type="video/mp4">
+        <source src="Videos/Down_by_the_River.ogv" type="video/ogg">
+        Your browser does not support the video tag.
+    </video>
+
+
+
+    <h3><a id="user-content-header-2" class="anchor" href="#header-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>HTML5 Audio</h3>
+
+    <p>HTML5 Audio tags are very similar to you can do all the same things Control it with DOM.</p>
+
+    <audio controls>
+        <source src="audio/SampleAudio_0.7mb.mp3" type="audio/mp3">
+        Your browser does not support the audio tag.
+    </audio>
+
+
+
+
+    <h3><a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>HTML5 Canvas</h3>
+    <p>HTML5 Canvas basically give you a canvas to draw things in you cna pout text draw art and alot of other things you can get at complicated and writing games in canvas. It best to explain it as a canvas to do whatever you want with it. </p>
+
+    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;">
+        Your browser does not support the HTML5 canvas tag.</canvas>
+    <script>
+
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.font = "30px Arial";
+        ctx.fillText("Hello World",10,50);
+
+
+    </script>
+
+
+
+
+</section>
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <title>JSON, Ajax, and Local Storage Cody Staker </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/cayman.css">
+</head>
+<body>
+<section class="page-header">
+    <h1 class="project-name">JSON, Ajax, and Local Storage Cody Staker</h1>
+</section>
+<meta charset="UTF-8">
+<section class="main-content">
+
+
+
+
+   <h3><a id="user-content-header-1" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Ajax and JSON</h3>
+    <p>Ajax give us the ability to update page without refreshing the page. In my program below I am requesting using AJAX a JSON file of the most recent post from the DestinyTheGame subreddit. </p>
+    <p><b>Disclaimer there is a chance the post from reddit could have something inappropriate I am sorry if that happens I feel like I picked a pretty clean subreddit</b></p>
+
+    <button id ="btn">Fetch the text from latest post from Destiny Subreddit</button>
+    <div id="reddit-text"></div>
+    <pre><code>
+         var redditContainer = document.getElementById("reddit-text");
+
+        var btn = document.getElementById("btn");
+
+        btn.addEventListener("click",function(){
+            var ourRequest = new XMLHttpRequest();
+            ourRequest.open('GET','https://www.reddit.com/r/Destinythegame/new.json?sort=new');
+            ourRequest.onload = function(){
+                var ourData = JSON.parse(ourRequest.responseText);
+                console.log(ourData);
+                renderHTML(ourData);
+            };
+ourRequest.send()});
+
+        function renderHTML(reddit){
+            var htmlString = "";
+
+
+            htmlString =  reddit.data.children["0"].data.selftext + '<br><br>' ;
+
+            redditContainer.insertAdjacentHTML('beforeend',htmlString);
+            var stringV = JSON.stringify(htmlString);
+            localStorage.setItem("lastpost" ,stringV );
+
+
+
+        }
+
+        function postPast(){
+           document.getElementById("last").innerHTML = localStorage.getItem("lastpost");
+
+        }
+
+
+
+
+    </code></pre>
+    <script>
+        var redditContainer = document.getElementById("reddit-text");
+
+        var btn = document.getElementById("btn");
+
+        btn.addEventListener("click",function(){
+            var ourRequest = new XMLHttpRequest();
+            ourRequest.open('GET','https://www.reddit.com/r/Destinythegame/new.json?sort=new');
+            ourRequest.onload = function(){
+                var ourData = JSON.parse(ourRequest.responseText);
+                console.log(ourData);
+                renderHTML(ourData);
+            };
+ourRequest.send()});
+
+        function renderHTML(reddit){
+            var redditText = "";
+            var redditString = "";
+
+
+            redditText =  reddit.data.children["0"].data.selftext + '<br><br>' ;
+            redditString = reddit.data.children["0"].data.selftext;
+
+            redditContainer.insertAdjacentHTML('beforeend',redditText);
+            var stringV = JSON.stringify(redditString);
+            localStorage.setItem("lastpost" ,stringV );
+
+
+
+        }
+
+        function postPast(){
+           document.getElementById("last").innerHTML = localStorage.getItem("lastpost");
+
+        }
+
+
+
+    </script>
+
+    <h3><a id="user-content-header-1" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Local Storage</h3>
+    <p>Using Local Storage it gives us the ability to store data locally in the browser. In the code above when you request the text from Reddit I parse the text into a string and then store it locally on the machine if you have requested the text before you should be able to refresh your page and request the same text that you had on the page before you refreshed.</p>
+    <button id ="pastButton" onclick="postPast()">Fetch the last post that I fetched in my session</button>
+    <div id ="last"></div>
+
+
+</section>
+
+</body>
+</html>
