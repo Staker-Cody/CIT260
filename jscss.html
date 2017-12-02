@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <title>CIT 261 notes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/cayman.css">
+
+    <style>
+        .growing {
+            width: 100px;
+            height: 100px;
+            -webkit-transition: width 2s, height 3s;
+            transition: width 1s, height 1s;
+
+
+
+        }
+        .growing:hover {
+
+            width: 400px;
+            height: 400px;
+        }
+
+
+        .animate{
+            width: 100px;
+            height: 100px;;
+            position: relative;
+            -webkit-animation-name: photo;
+            -webkit-animation-duration: 4s;
+            -webkit-animation-iteration-count: infinite;
+            animation-name: photo;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;}
+
+        .transform{
+            width: 100px;
+            height: 100px;;
+
+        }
+
+        .transform:hover{
+            -ms-transform: rotate(7deg); /* IE 9 */
+            -webkit-transform: rotate(7deg); /* Chrome, Safari, Opera */
+            transform: rotate(7deg);
+
+
+
+        }
+
+
+        /* Safari 4.0 - 8.0 */
+        @-webkit-keyframes photo {
+            0%   {left:0px; top:0px;}
+            25%  {left:200px; top:0px;}
+            50%  {left:200px; top:200px;}
+            75%  {left:0px; top:200px;}
+            100% {left:0px; top:0px;}
+        }
+
+        /* Standard syntax */
+        @keyframes photo {
+            0%   {left:0px; top:0px;}
+            25%  {left:200px; top:0px;}
+            50%  {left:300px; top:0px;}
+            75%  {left:200px; top:0px;}
+            100% {left:100px; top:0px;}
+        }
+
+        img{
+            width: 100px;
+            height: 100px;
+
+        }
+
+    </style>
+</head>
+<body>
+<section class="page-header">
+    <h1 class="project-name">JavaScript Events, Manipulating CSS with JavaScript Cody Staker</h1>
+</section>
+<section class="main-content">
+
+
+    <p>In all the examples below I am using JavaScript to change the class name to each of the elements. I am doing this by using HTML events to trigger the JavaScript </p>
+    <h4>Click on each image to see a larger preview</h4>
+    <h3><a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>CSS Transitions</h3>
+    <div id="cf">
+        <img id="grow1" onclick="grow('grow1')" src="photos/sail.jpg" />
+        <img id="grow2" onclick="grow('grow2')" src="photos/City.jpg" />
+    </div>
+
+    <script>
+        function grow(image){
+            document.getElementById(image).className = "growing";
+
+
+        }
+
+    </script>
+    <pre><code>
+             .growing {
+            width: 100px;
+            height: 100px;
+            -webkit-transition: width 2s, height 3s; /* Safari */
+            transition: width 1s, height 1s;
+
+
+
+        }
+        .growing:hover {
+
+            width: 300px;
+            height: 300px;
+        }
+
+        Java Script
+             function grow(image){
+                 document.getElementById(image).className = "growing";
+
+
+             }
+      </code></pre>
+
+
+
+
+    <h3><a id="user-content-header-6" class="anchor" href="#header-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>CSS Animations</h3>
+    <p> </p>
+
+
+
+    <div id="cf">
+        <img id="myImage1" src="photos/sail.jpg" />
+        <img id="myImage2" src="photos/City.jpg" />
+    </div>
+    <button type ="button" onclick="startAnimation('myImage1')">Start Animation for Image 1</button>
+    <button type ="button" onclick="startAnimation('myImage2')">Start Animation for Image 2</button>
+    <br>
+    <button type ="button" onclick="stopAnimation('myImage1')">Stop Animation for Image 1</button>
+    <button type ="button" onclick="stopAnimation('myImage2')">Stop Animation for Image 2</button>
+    <script>
+        function startAnimation(image) {
+            document.getElementById(image).className ="animate";
+
+
+        }
+        function stopAnimation(image) {
+            document.getElementById(image).className = "";
+
+
+        }
+
+    </script>
+
+
+    <pre><code>
+        .animate{
+            width: 100px;
+            height: 100px;;
+            position: relative;
+            -webkit-animation-name: photo;
+            -webkit-animation-duration: 4s;
+            -webkit-animation-iteration-count: infinite;
+            animation-name: photo;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;}
+
+
+     @-webkit-keyframes photo {
+            0%   {left:0px; top:0px;}
+            25%  {left:200px; top:0px;}
+            50%  {left:300px; top:0px;}
+            75%  {left:200px; top:0px;}
+            100% {left:100px; top:0px;}
+        }
+
+        /* Standard syntax */
+        @keyframes photo {
+            0%   {left:0px; top:0px;}
+            25%  {left:200px; top:0px;}
+            50%  {left:300px; top:0px;}
+            75%  {left:200px; top:0px;}
+            100% {left:100px; top:0px;}
+        }
+    }
+
+    JavaScript
+    function startAnimation(image) {
+        document.getElementById(image).className ="animate";
+
+
+    }
+    function stopAnimation(image) {
+        document.getElementById(image).className = "";
+
+
+    }
+
+    </code></pre>
+
+
+
+    <section>
+
+
+        <h3><a id="user-content-header-4" class="anchor" href="#header-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>CSS Transforms</h3>
+        <h4>Click each Image and hover over it to Transform it</h4>
+        <div id="cf">
+            <img id="tr1"onclick="transforming('tr1')" src="photos/sail.jpg" />
+            <img id="tr2" onclick="transforming('tr2')" src="photos/City.jpg" />
+        </div>
+
+        <script>
+
+            function transforming(image) {
+                document.getElementById(image).className = "transform";
+            }
+
+        </script>
+
+
+
+        <pre><code>
+
+
+        .transform{
+        width: 100px;
+        height: 100px;;
+        -ms-transform: rotate(40deg);
+        -webkit-transform: rotate(40deg);
+        transform: rotate(40deg);
+
+        }
+        function transforming(image) {
+            document.getElementById(image).className = "transform";
+        }
+
+
+
+
+        </code></pre>
+
+
+
+    </section>
+
+
+</section>
+
+</body>
+<body>
+
+</body>
+</html>

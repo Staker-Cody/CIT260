@@ -82,7 +82,7 @@
 
     <h3><a id="user-content-header-1" class="anchor" href="#header-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Touch Events</h3>
 
-    <button type="button" ontouchstart="animate()">Click to fill the paragraph</button>
+    <button type="button" onclick="coolEvent()">Click to fill the paragraph</button>
 
 
 
@@ -90,8 +90,8 @@
 
 
     <script>
-        function animate(){
-            document.getElementsByClassName("div1").id = "animate1";
+        function coolEvent(){
+            document.getElementById("div1").className = "animate1";
 
 
         }
