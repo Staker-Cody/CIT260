@@ -271,9 +271,9 @@
     this.carColor = color;
     }
     var mustang = new car("Ford", 1991, "green");
-    var tundra = new car("Toyota", 2014, "blue");
+    var rav4 = new car("Toyota", 2014, "blue");
 
-    document.write("I own a ",tundra.carModel," Trundra it is ", tundra.carColor,".");
+    document.write("I own a ",rav4.carModel," Trundra it is ", rav4.carColor,".");
     </script>
 
     <h3><a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>JavaScript Method</h3>
@@ -286,7 +286,7 @@
          this.carColor = color;
      }
         var mustang = new car("Ford", "1991", "green");
-        var tundra = new car("Toyota", "2014", "blue");
+        var rav4 = new car("Toyota", "2014", "blue");
 
 
        </code></pre>
@@ -310,9 +310,38 @@
 
     </script>
 
+
+    <h3><a id="user-content-header-3" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>JavaScript inheritance</h3>
+
+
+
     <hr>
 
+    <script>
+        function truck(amodel,ayear,acolor,size){
+            aCar.call(this,amodel,ayear,acolor);
 
+            this.size = size;
+        }
+
+        var tundra = new truck("Toyota",2017,"black","1/2 Ton");
+        document.write("The size of your tundra is ", tundra.size,"<br>");
+
+    </script>
+
+    <pre><code data-language="javascript">
+
+       function truck(amodel,ayear,acolor,size){
+            aCar.call(this,amodel,ayear,acolor);
+
+            this.size = size;
+        }
+
+        var tundra = new truck("Toyota",2017,"black","1/2 Ton");
+        document.write("The size of your tundra is ", tundra.size,"<br>");
+
+
+       </code></pre>
 
   <footer class="site-footer">
     <span class="site-footer-owner"><a href="https://github.com/jasonlong/cayman-theme">Cayman</a> is maintained by <a href="https://github.com/jasonlong">jasonlong</a>.</span>

@@ -80,21 +80,22 @@
 
     </style>
 </head>
-<body>
+<body onload="startAnimation('myImage3')">
 <section class="page-header">
     <h1 class="project-name">JavaScript Events, Manipulating CSS with JavaScript Cody Staker</h1>
 </section>
 <section class="main-content">
 
 
-    <p>In all the examples below I am using JavaScript to change the class name to each of the elements. I am doing this by using HTML events to trigger the JavaScript </p>
+    <p>In all the examples below I am using JavaScript to change the class name to each of the elements. I am doing this by using HTML events to trigger the JavaScript also know as JavaScript events. </p>
     <h4>Click on each image to see a larger preview</h4>
     <h3><a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>CSS Transitions</h3>
     <div id="cf">
         <img id="grow1" onclick="grow('grow1')" src="photos/sail.jpg" />
         <img id="grow2" onclick="grow('grow2')" src="photos/City.jpg" />
     </div>
-
+    <p><b>JSEVENTS onload</b> This image below started animating when the page loaded using the onload event in HTML</p>
+<img id="myImage3" src="photos/City.jpg" />
     <script>
         function grow(image){
             document.getElementById(image).className = "growing";
